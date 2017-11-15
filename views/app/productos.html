@@ -1,0 +1,85 @@
+{{!
+< layout/default}} {{#extend "css"}} <!-- MIS ARCHIVOS CSS -->
+    <style type="text/css">
+    .title-blue {
+        color: blue;
+    }
+    </style>
+    {{/extend}} {{> navbar}}
+    <h1 class="title-blue text-center">Inventario De Productos</h1>
+
+    <br></br>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th class="text-center">ID</th>
+                <th class="text-center">NOMBRE</th>
+                <th class="text-center">PROVEEDOR</th>
+                <th class="text-center">PRECIO</th>
+                <th class="text-center">CANTIDAD</th>
+                <th class="text-center">ACTUALIZAR</th>
+                <th class="text-center">BORRAR</th>
+            </tr>
+        </thead>
+        <tbody id="body-table">
+        </tbody>
+    </table>
+    <a class="btn btn-primary  " data-toggle="modal" href='#modal-id'>INGRESAR PRODUCTO</a>
+    <div class="modal fade" id="modal-id">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Formulario De Inventario</h4>
+                </div>
+                <div class="modal-body">
+                    <input type="text" id="nombre" class="form-control" placeholder="Ingrese nombre producto">
+                    <br>
+                    </br>
+                    <input type="text" id="proveedor" class="form-control" placeholder="Ingrese proveedor">
+                    <br>
+                    </br>
+                    <input type="text" id="precio" class="form-control" placeholder="Ingrese precio">
+                    <br>
+                    </br>
+                    <input type="text" id="cantidad" class="form-control" placeholder="Ingrese cantidad">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    <button id="saveButtonP" type="button" class="btn btn-success">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal_update">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Formulario De Inventario</h4>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="id1" class="form-control" >
+                    <br>
+                    <input type="text" id="nombre1" class="form-control" placeholder="Ingrese nombre producto">
+                    <br>
+                    </br>
+                    <input type="text" id="proveedor1" class="form-control" placeholder="Ingrese proveedor">
+                    <br>
+                    </br>
+                    <input type="text" id="precio1" class="form-control" placeholder="Ingrese precio">
+                    <br>
+                    </br>
+                    <input type="text" id="cantidad1" class="form-control" placeholder="Ingrese cantidad">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    <button id="saveButtonPu" type="button" class="btn btn-success">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{#extend "js"}}
+    <script type="text/javascript" src="/public/app/productos/main.js"></script>
+    {{/extend}}

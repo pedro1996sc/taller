@@ -7,7 +7,7 @@ const handlebars = require('handlebars');
 const extend = require('handlebars-extend-block');
 const dotenv = require('dotenv');
 
-dotenv.load(); 
+dotenv.load();
 // Create a server with a host and port
 const server = new Hapi.Server();
 server.connection({
